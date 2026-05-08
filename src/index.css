@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-page-bg: #0a0a0a;
+  --color-card-bg: #111111;
+  --color-border-subtle: #1f1f1f;
+  --color-text-muted: #888888;
+  --color-accent: #00ffaa; /* Emerald Accent */
+  --color-accent-soft: rgba(0, 255, 170, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-page-bg);
+}
+
+body {
+  @apply antialiased text-white bg-page-bg selection:bg-accent selection:text-page-bg;
+  font-family: var(--font-sans);
+}
+
+/* Minimalist Utilities */
+.section-padding {
+  @apply py-8 md:py-16 px-6 md:px-12;
+}
+
+.border-subtle {
+  @apply border border-border-subtle;
+}
+
+.text-reveal {
+  @apply overflow-hidden block;
+}
+
+.mono-tag {
+  @apply text-[10px] uppercase tracking-[0.2em] font-medium text-text-muted;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
